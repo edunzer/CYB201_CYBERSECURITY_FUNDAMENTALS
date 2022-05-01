@@ -1,0 +1,16 @@
+## WEEK 2 DISCUSSION: DESIGNING YOUR NETWORK TO PROTECT A WEB SERVER
+
+You are designing a network in which you will host your company's web site.  The information on the company web site is publicly available but must be protected from unauthorized changes and needs to be consistently available.  Describe the following:
+
+1. Explain the threats to the web server that you need to prevent or mitigate (include at least 2)
+
+    - One of the most common threats to web servers and also other coding environments is injection flaws. This is where a potential user is allowed to enter in text (inject) into a text box field in the UI that then gets pushed into the code. What then happens behind the scenes is where the flaw takes place. If proper restrictions on that field are not maintained you can enter in anything into the field. So the flaw comes into play when you are allowed to enter in code that then gets injected into the backend environment and starts to run. This most commonly SQL injection. 
+    - Another threat that is somewhat related to our first problem is Cross-site scripting. This takes place after a unauthorized user has gained access and then changes the code so that your normal users will get infected links that can download malware, and take control of more devices. 
+
+2. Identify and explain issues that could be single points of failure in providing the web service. Include a list of resources that could be single points of failure and how you'd over come them.
+
+    - One of hte most common failure points is either static or non scalable servers. One of the nicest parts about large scale server providers like AWS is that they can build web service plans that involve scaling to your user load, or server load. This mitigates the largest point of failure for any web server which is lack of power to handle all the traffic that could happen. If you are set to only handle 100 people on the website and you have 200 then performance is going to suffer. 
+
+3.  Identify network elements that you would include in your design to help protect your web servers on the network.  Explain what each element does and why it adds a layer of protection.  
+
+    - This can largely depend on if you are hosting in a single location or multiple but for this example ill say we have multiple hosting networks. So first the best protection to "keep the web service up and running" is to have redundancy as stated above. So for this example there should be multiple hosting servers in multiple locations to maximize efficiency to users in different locations. Then inside each of those locations we need to have separation to the DMZ servers. This separation is achieved through having multiple firewalls which separate the front and backend and a DNS server which routes traffic to the correct locations. The common practice would be to have a firewall between each layer of networking. So a firewall between users and the dns server, then another firewall between the dns and web server, or SQL server, etc. etc. 

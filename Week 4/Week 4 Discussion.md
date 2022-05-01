@@ -1,0 +1,18 @@
+## WEEK 4 DISCUSSION: AUTHENTICATION, ACCESS CONTROLS & CRYPTOGRAPHY
+
+For this week's discussion you can either pick an organization you have been part of (as an employee, volunteer, student, customer, etc.) or research an organization that you're interested in.  Identify the organization and discuss the following:
+
+- What type of organization is this and what kind of data does the organization need to protect?
+  Opus Agency is the organization I choose. They have several types of data. The first and most important is client data (document, emails, photos, etc.). This information is commonly the most protected not because of Opus's own protections in place but actually because of the clients own protections that they require for there information. Think of large tech companies sharing information about product launches. Secondly would be financial data. This also revolves around clients but also just internal information about deals that have been won or lost. Third internal employee information such as pay for employees, or even outside contractors or suppliers. All of which is confidential to the employee, or contract as is with any business. 
+
+- If you have an account (or will have an account) with this organization, describe how the authorization is controlled.  How many factors are used to authorize access?  What kind of factors are they?  What are the risks and benefits of the approach currently used?  Could the organization do better in the area of authentication?
+  The organization uses a SSO service that allows for all account information to be control through your personal account with that SSO service. The SSO service is monitored and controlled through the IT team so that they have ultimate say on who can login to what service. This largely helps unauthorized access to services that are only supposed to be for certain high level employees. 
+  
+  To access this SSO service there is first a username and password and then multi factor authentication that is also put in place after the correct inputting of a username and password. The login is required every time the service times out. Main SSO passwords are also frequently reset to limit unauthorized access even further. This is one of the best approaches to security since it limits and password sharing for singular accounts but at the same time using a single password to technically access all services inside the SSO allows for less security. 
+
+- Once a user has authenticated into the system, what kind of access might they have?  What approach do you think the organization is using to control access and why?
+  As stated in the description above they would only have the access to the systems and services that IT awards them. Normally you start out with basic user accounts for Microsoft 365 and other services that you need to do your job and then request others as you go along pending approval from your bosses or higher management. This is an easy way to prevent unauthorized access and control login information to those systems and or services. 
+
+- What kind of data does the organization have to protect?  If they are using cryptography, what is the main purpose- data protection or verification of authenticity?  Why?
+  As stated in the first question the data pertains to all client information, which can range in data types, but then also internal financial documents and employee information. Also as stated above Opus uses SSO services that do have high level encryption along with the services that it gives access to using there own different levels of encryption. So yes we do use encryption but its leveraged through out payed for security services it was not implemented by IT or the organization. 
+  
